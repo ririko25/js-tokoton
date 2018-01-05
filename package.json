@@ -1,0 +1,17 @@
+{
+  "name": "js-tokoton",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ririko25/js-tokoton.git",
+  "author": "ririko <ririkokanikama25@yahoo.co.jp>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "server": "http-server -p 8080",
+    "tsc": "tsc"
+  },
+  "devDependencies": {
+    "http-server": "^0.10.0",
+    "typescript": "^2.6.2"
+  }
+}
