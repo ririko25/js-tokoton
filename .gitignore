@@ -1,6 +1,9 @@
 # JS file
 /chapter*/**/*.js
 /chapter*/**/*.js.map
+MyOmikugi/*.js
+MyOmikugi/*.js.map
+
 
 # Logs
 logs
