@@ -23,6 +23,6 @@ function binary_search(data, value) {
   return -1;
 }
 
-const data = [1, 2, 3, 4, 666, 7, 8, 9, 10];
+const data = [1, 2, 3, 499, 6, 7, 8, 9, 10];
 console.log(linearSearch(data, 99));
-console.log(binary_search(data, 666));
+console.log(binary_search(data.sort(), 499));
