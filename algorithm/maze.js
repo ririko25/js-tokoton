@@ -1,4 +1,4 @@
-const maze = [
+let maze = [
   [9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
   [9, 0, 0, 0, 9, 0, 0, 0, 0, 0, 0, 9],
   [9, 0, 9, 0, 0, 0, 9, 9, 0, 9, 9, 9],
@@ -12,3 +12,28 @@ const maze = [
   [9, 0, 0, 0, 0, 0, 0, 9, 0, 0, 0, 9],
   [9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
 ];
+
+const pos = [[1, 1, 0]];
+
+while (pos.length > 0) {
+  const [x, y, depth] = pos.shift(0);
+
+  if (maze[x][y] == 1) {
+    console.log(depth);
+    break;
+  }
+  maze[x][y] = 2;
+
+  if (maze[x - 1][y] < 2) {
+    pos.push([x - 1, y, depth + 1]);
+  }
+  if (maze[x + 1][y] < 2) {
+    pos.push([x + 1, y, depth + 1]);
+  }
+  if (maze[x][y - 1] < 2) {
+    pos.push([x, y - 1, depth + 1]);
+  }
+  if (maze[x][y + 1] < 2) {
+    pos.push([x, y + 1, depth + 1]);
+  }
+}
